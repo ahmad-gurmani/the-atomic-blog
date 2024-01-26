@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { usePosts } from "../Context/ContextProvider";
 
-export default function FormAddPost({ onAddPost }) {
+export default function FormAddPost() {
+    const { onAddPost } = usePosts();
+
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
 

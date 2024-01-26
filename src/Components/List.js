@@ -1,4 +1,8 @@
-export default function List({ posts }) {
+import { usePosts } from "../Context/ContextProvider";
+
+export default function List() {
+    const { posts } = usePosts();
+
     return (
         <ul>
             {posts.map((post, i) => (

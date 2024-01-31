@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { usePosts } from "../Context/ContextProvider"
 import Results from "./Results";
 import SearchPosts from './SearchPosts';
 
 
-export default function Header() {
+const Header = memo(function Header() {
     const { onClearPosts } = usePosts();
 
     return (
@@ -18,4 +19,6 @@ export default function Header() {
             </div>
         </header>
     );
-}
+})
+
+export default Header;
